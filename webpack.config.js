@@ -1,11 +1,13 @@
 var path = require('path')
 var webpack = require('webpack')
 
+const ASSET_PATH = process.env.ASSET_PATH || './dist/';
+
 module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, './docs/dist'),
-    publicPath: '/dist/',
+    publicPath: ASSET_PATH,
     filename: 'v-jsoneditor.min.js',
     library: 'VJsoneditor',
     libraryTarget: 'umd',
@@ -66,8 +68,9 @@ if (process.env.NODE_ENV === 'production') {
   module.exports.plugins = (module.exports.plugins || []).concat([
     new webpack.DefinePlugin({
       'process.env': {
-        NODE_ENV: '"production"'
-      }
+        NODE_ENV: '"production"',
+        ASSET_PATH: JSON.stringify(ASSET_PATH)
+      } 
     }),
     new webpack.optimize.UglifyJsPlugin({
       sourceMap: true,
