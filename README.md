@@ -2,9 +2,11 @@
 
 > Vue JSONEditor
 
-## DEMO
+## Try the demo
 
 https://yansenlei.github.io/VJsoneditor/
+
+![demo](./v-jsoneditor.gif)
 
 ## Installation
 
