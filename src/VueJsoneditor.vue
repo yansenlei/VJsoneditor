@@ -7,7 +7,6 @@
 
 <script>
     import JSONEditor from 'jsoneditor'
-    import _ from 'lodash'
     export default {
         data() {
             return {
