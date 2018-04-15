@@ -5,7 +5,7 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, './docs/dist'),
-    publicPath: '/docs/dist/',
+    publicPath: '/dist/',
     filename: 'v-jsoneditor.min.js',
     library: 'VJsoneditor',
     libraryTarget: 'umd',
