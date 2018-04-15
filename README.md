@@ -19,7 +19,7 @@ npm install v-jsoneditor
 ### Import
 
 ```javascript
-import VJsoneditor from 'vue-jsoneditor'
+import VJsoneditor from 'v-jsoneditor'
 
 export default {
     name: 'app',
