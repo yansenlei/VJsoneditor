@@ -6,7 +6,7 @@
 </template>
 
 <script>
-    import JSONEditor from 'jsoneditor'
+    import JSONEditor from '../node_modules/jsoneditor/dist/jsoneditor.min.js'
     export default {
         data() {
             return {
