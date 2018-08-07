@@ -20,10 +20,19 @@ npm install v-jsoneditor
 
 ## Using
 
+### Import globally
+
+```javascript
+import Vue from 'vue'
+import VJsoneditor from 'v-jsoneditor/src/index'
+
+Vue.use(VJsoneditor)
+```
+
 ### Import
 
 ```javascript
-import VJsoneditor from 'v-jsoneditor'
+import VJsoneditor from 'v-jsoneditor/src/index'
 
 export default {
     name: 'app',
@@ -43,6 +52,12 @@ export default {
         }
     }
 }
+```
+
+### Browser
+```html
+<script src='https://unpkg.com/vue@latest'></script>
+<script src="./dist/v-jsoneditor.min.js"></script>
 ```
 
 ### Use in template
