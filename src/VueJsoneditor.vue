@@ -27,9 +27,7 @@ export default {
         }
       }
     },
-    value: {
-      type: Object
-    },
+    value: [Object, Array, Number, String, Boolean],
     height: {
       type: String
     },
@@ -63,14 +61,12 @@ export default {
     initView() {
       if (!this.editor) {
         var container = this.$refs.jsoneditor
-        const options = {
-          ...{
+        const options = Object.assign({
             onChange: this.onChange,
             navigationBar: false,
             statusBar: false
           },
-          ...this.options
-        }
+          this.options)
         this.editor = new JSONEditor(container, options)
       }
       this.editor.set(this.value || {})
