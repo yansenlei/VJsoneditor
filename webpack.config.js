@@ -45,7 +45,7 @@ module.exports = {
       // },
       {
         test: /\.(png|jpg|gif|svg)$/,
-        loader: 'url-loader?limit=5000&name=assets/[name].[ext]'
+        loader: 'url-loader?limit=5000&name=[name].[ext]'
       }
     ]
   },
