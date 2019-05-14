@@ -85,9 +85,9 @@ export default {
       }
     },
     max(value) {
-      setTimeout(() => {
+      this.$nextTick(() => {
         this.initView()
-      }, 200)
+      })
     }
   },
   mounted() {
