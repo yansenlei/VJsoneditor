@@ -24,7 +24,7 @@ npm install v-jsoneditor
 
 ```javascript
 import Vue from 'vue'
-import VJsoneditor from 'v-jsoneditor/src/index'
+import VJsoneditor from 'v-jsoneditor'
 
 Vue.use(VJsoneditor)
 ```
@@ -32,7 +32,7 @@ Vue.use(VJsoneditor)
 ### Import
 
 ```javascript
-import VJsoneditor from 'v-jsoneditor/src/index'
+import VJsoneditor from 'v-jsoneditor'
 
 export default {
     name: 'app',
