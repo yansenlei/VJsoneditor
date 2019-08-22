@@ -47,7 +47,7 @@ export default {
         error = true
       }
       if (error) {
-        this.$emit("error")
+        this.$emit("error", error)
       } else {
         if (this.editor) {
           this.internalChange = true
