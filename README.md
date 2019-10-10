@@ -63,7 +63,7 @@ export default {
 ### Use in template
 
 ```html
-<v-jsoneditor v-model="json" :options="options" :plus="false" :height="400px" @error="onError">
+<v-jsoneditor v-model="json" :options="options" :plus="false" height="400px" @error="onError">
 ```
 
 ### Options
