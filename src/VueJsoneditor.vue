@@ -38,13 +38,12 @@ export default {
   },
   methods: {
     onChange() {
-      let error = false
+      let error = null
       let json = {}
       try {
         json = this.editor.get()
-        error = false
       } catch (err) {
-        error = true
+        error = err
       }
       if (error) {
         this.$emit("error", error)

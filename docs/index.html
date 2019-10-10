@@ -11,8 +11,9 @@
   <script src="./dist/v-jsoneditor.min.js"></script>
   <div id="app">
     <template>
-        <v-jsoneditor v-model="json"></v-jsoneditor>
+        <v-jsoneditor ref="editor" v-model="json" @error="onError"></v-jsoneditor>
         <p>{{ json }}</p>
+        <button type="button" @click="onClick">get</button>
     </template>
   </div>
   <script>
@@ -24,10 +25,13 @@
         }
       },
       methods: {
-        onError(){
-          
+        onError(err){
+          console.log(err)
+        },
+        onClick () {
+          console.log(this.$refs.editor.editor.get())
         }
-      }
+      },
     };
     var Ctor = Vue.extend(Main)
     new Ctor().$mount('#app')
