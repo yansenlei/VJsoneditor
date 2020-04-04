@@ -6,7 +6,7 @@ const ASSET_PATH = process.env.ASSET_PATH || './dist/';
 module.exports = {
   entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, './docs/dist'),
+    path: path.resolve(__dirname, './dist'),
     publicPath: ASSET_PATH,
     filename: 'v-jsoneditor.min.js',
     library: 'VJsoneditor',
