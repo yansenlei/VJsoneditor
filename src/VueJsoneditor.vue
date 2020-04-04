@@ -78,10 +78,13 @@ export default {
     }
   },
   watch: {
-    value(value) {
-      if (this.editor && value && !this.internalChange) {
-        this.editor.set(value)
-      }
+    value: {
+      handler(value) {
+        if (this.editor && value && !this.internalChange) {
+          this.editor.set(value)
+        }
+      },
+      deep: true
     },
     max(value) {
       this.$nextTick(() => {
