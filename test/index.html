@@ -8,12 +8,12 @@
 
 <body>
   <script src='https://unpkg.com/vue@2.2.6'></script>
-  <script src="./dist/v-jsoneditor.min.js"></script>
+  <script src="../dist/v-jsoneditor.min.js"></script>
   <div id="app">
     <template>
         <v-jsoneditor ref="editor" v-model="json" @error="onError"></v-jsoneditor>
         <p>{{ json }}</p>
-        <button type="button" @click="onClick">get</button>
+        <button type="button" @click="onClick">editor.get()</button>
     </template>
   </div>
   <script>
