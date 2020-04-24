@@ -8,10 +8,10 @@
 
 <body>
   <script src='https://unpkg.com/vue@2.2.6'></script>
-  <script src="../dist/v-jsoneditor.min.js"></script>
+  <script src="./v-jsoneditor.min.js"></script>
   <div id="app">
     <template>
-        <v-jsoneditor ref="editor" v-model="json" @error="onError"></v-jsoneditor>
+        <v-jsoneditor ref="editor" v-model="json" :options="options" @error="onError"></v-jsoneditor>
         <p>{{ json }}</p>
         <button type="button" @click="onClick">editor.get()</button>
     </template>
@@ -21,7 +21,13 @@
       name: 'test',
       data() {
         return {
-          json: {"hello": "vue"}
+          json: {"hello": "vue"},
+          options: {
+            onChange: (e) => {
+              console.log(e)
+            },
+            mode: 'code'
+          }
         }
       },
       methods: {

@@ -22,9 +22,7 @@ export default {
     options: {
       type: Object,
       default: () => {
-        return {
-          mode: "code"
-        }
+        return {}
       }
     },
     value: [Object, Array, Number, String, Boolean],
@@ -56,17 +54,18 @@ export default {
           })
         }
       }
+      this.options.onChange && this.options.onChange(...arguments)
     },
     initView() {
       if (!this.editor) {
         var container = this.$refs.jsoneditor
-        const options = Object.assign({
-            onChange: this.onChange,
-            navigationBar: false,
-            statusBar: false
-          },
-          this.options)
+        let cacheChange = this.options.onChange
+        delete this.options.onChange
+        const options = Object.assign(this.options, {
+          onChange: this.onChange
+        })
         this.editor = new JSONEditor(container, options)
+        this.options.onChange = cacheChange
       }
       this.editor.set(this.value || {})
     },
