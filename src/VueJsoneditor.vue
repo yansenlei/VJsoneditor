@@ -89,6 +89,13 @@ export default {
       this.$nextTick(() => {
         this.initView()
       })
+    },
+    options: {
+      handler () {
+        if (this.options && this.options.mode && this.editor) {
+          this.editor.setMode(this.options.mode)
+        }
+      },
     }
   },
   mounted() {
