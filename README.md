@@ -1,6 +1,7 @@
 [![npm version](https://badge.fury.io/js/v-jsoneditor.svg)](https://badge.fury.io/js/v-jsoneditor)
 [![Build Status](https://api.travis-ci.org/yansenlei/VJsoneditor.svg?branch=master)](https://travis-ci.org/yansenlei/VJsoneditor) 
 [![license](https://img.shields.io/npm/l/express.svg)](https://github.com/yansenlei/VJsoneditor/blob/master/LICENSE) 
+[![license](https://img.shields.io/npm/dm/v-jsoneditor.svg)](https://github.com/yansenlei/VJsoneditor/blob/master/LICENSE) 
 
 # v-jsoneditor
 
