@@ -21,7 +21,7 @@
     "email": "leiyswork@163.com"
   },
   "dependencies": {
-    "jsoneditor": "^8.6.4"
+    "jsoneditor": "^9.1.1"
   },
   "browserslist": [
     "> 1%",
