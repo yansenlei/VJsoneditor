@@ -79,7 +79,7 @@ export default {
   watch: {
     value: {
       handler(value) {
-        if (this.editor && value && !this.internalChange) {
+        if (this.editor && !this.internalChange) {
           this.editor.set(value)
         }
       },
