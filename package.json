@@ -1,7 +1,7 @@
 {
   "name": "v-jsoneditor",
   "description": "vue use jsoneditor",
-  "version": "1.4.3",
+  "version": "1.4.4",
   "author": "leiyswork@gmail.com",
   "license": "MIT",
   "main": "dist/v-jsoneditor.min.js",
