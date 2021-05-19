@@ -15,6 +15,11 @@
         <p>{{ json }}</p>
         <button type="button" @click="onClick">console.log editor.get()</button>
         <input v-model="json.hello" type="text">
+        <p>switch mode</p>
+        <input type="radio" id="tree" name="gender" value="tree" v-model="options.mode">
+        <label for="tree">tree</label><br>
+        <input type="radio" id="code" name="gender" value="code" v-model="options.mode">
+        <label for="code">code</label><br>
     </template>
   </div>
   <script>

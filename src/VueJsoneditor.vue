@@ -91,11 +91,12 @@ export default {
       })
     },
     options: {
-      handler () {
+      handler (value) {
         if (this.options && this.options.mode && this.editor) {
           this.editor.setMode(this.options.mode)
         }
       },
+      deep: true
     }
   },
   mounted() {
