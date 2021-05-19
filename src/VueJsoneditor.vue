@@ -67,7 +67,7 @@ export default {
         this.editor = new JSONEditor(container, options)
         this.options.onChange = cacheChange
       }
-      this.editor.set(this.value || {})
+      this.editor.set(this.value !== undefined ? this.value : {})
     },
     destroyView() {
       if (this.editor) {
