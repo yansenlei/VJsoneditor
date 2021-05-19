@@ -67,7 +67,7 @@ export default {
         this.editor = new JSONEditor(container, options)
         this.options.onChange = cacheChange
       }
-      this.editor.set(this.value || {})
+      this.editor.set(this.value !== undefined ? this.value : {})
     },
     destroyView() {
       if (this.editor) {
@@ -79,8 +79,8 @@ export default {
   watch: {
     value: {
       handler(value) {
-        if (this.editor && value && !this.internalChange) {
-          this.editor.set(value)
+        if (this.editor && value !== undefined && !this.internalChange) {
+          this.editor.set(value);
         }
       },
       deep: true
