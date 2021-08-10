@@ -13,6 +13,7 @@
     <template>
         <v-jsoneditor ref="editor" v-model="json" :options="options" @error="onError"></v-jsoneditor>
         <p>{{ json }}</p>
+        <button type="button" @click="onValidate()">onValidate</button>
         <button type="button" @click="onClick">console.log editor.get()</button>
         <input v-model="json.hello" type="text">
         <p>switch mode</p>
@@ -32,6 +33,19 @@
             onChange: (e) => {
               console.log(e)
             },
+            onValidate: function (json) {
+              console.log('onValidate', json)
+              var errors = [];
+
+              if (json && json.customer && !json.customer.address) {
+                errors.push({
+                  path: ['customer'],
+                  message: 'Required property "address" missing.'
+                });
+              }
+
+              return errors;
+            },
             mode: 'code'
           }
         }
@@ -42,6 +56,9 @@
         },
         onClick () {
           console.log(this.$refs.editor.editor.get())
+        },
+        onValidate () {
+          console.log(this.$refs.editor.editor.validate())
         }
       },
     };
