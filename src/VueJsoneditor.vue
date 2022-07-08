@@ -1,7 +1,7 @@
 <template lang="html">
     <div class="jsoneditor-container" :class="{'max-box':max,'min-box':!max}" :style="getHeight">
         <div ref="jsoneditor" class="jsoneditor-box"></div>
-        <button type="button" @click="max = !max" class="max-btn" size="mini" v-if="options.mode == 'code' && plus"></button>
+        <button type="button" @click="max = !max" class="max-btn" :style="getRightPadding" v-if="plus"></button>
     </div>
 </template>
 
@@ -113,6 +113,13 @@ export default {
         }
       }
       return {}
+    },
+    getRightPadding() {
+      if (this.options.mode === 'tree') {
+        return {
+          right: '200px'
+        }
+      }
     }
   }
 }
@@ -121,7 +128,7 @@ export default {
 <style lang="css" scoped>
 .jsoneditor-container.max-box {
   position: fixed;
-  top: 0px;
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
@@ -150,8 +157,7 @@ export default {
   color: #fff;
   width: 24px;
   height: 24px;
-  background: rgba(0, 0, 0, 0) url(./assets/plus.svg) no-repeat;
-  background-position: 3px;
+  background: rgba(0, 0, 0, 0) url(./assets/plus.svg) no-repeat 3px;
   border: 1px solid rgba(0, 0, 0, 0);
   border-radius: 3px;
 }
